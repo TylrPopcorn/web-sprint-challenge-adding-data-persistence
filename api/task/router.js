@@ -17,12 +17,12 @@ router.post("/", (req, res, next) => {
                     result.task_completed = true
                 }
 
-                console.log(result, " <----")
+                //console.log(result, " <----")
 
                 res.status(201).json(result)
             })
             .catch(res => {
-                console.log(res.message, "TESGFS")
+                //  console.log(res.message, "TESGFS")
                 next()
             });
     } else {
@@ -47,7 +47,7 @@ router.get("/", async (req, res) => {
             }
         }
     }
-    res.status(201).json(result)
+    res.status(200).json(result)
 })
 
 module.exports = router;
